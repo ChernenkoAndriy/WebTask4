@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="pizza-card.css">
+    <script src="sidepizza.js" defer></script>
+</head>
+<body>
+    <div class="centralPanel">
+        <div class="header">
+            <div class="badge" data-location="up">
+                <label class="first"> PIZZA</label>
+                <label class="second">   KMA</label>
+                <img src="assets\images\discount.svg">
+            </div>
+            <div class="rows">
+                <div class="firstRow">
+                    <div class="labels">
+                        <label for="phone">(044) 222 5 222</label>
+                        <label for="timetable">24 години/7 днів на тиждень</label>
+                        <label for="delivery">Безкоштовна доставка піци</label>
+                    </div>
+                    <button class="orangeButton">Ввійти</button>
+                </div>
+                <div class="secondRow">
+                    <label for="pizza">Піца</label>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <br>
+                <br>
+                <br>
+                <br>
+                <div class="menutop">
+                <div class="mainheader">     
+                <h1 class="mainlabel"> 
+                    Усі піци
+                </h1>
+                <h1 class="pizzaamount">
+                   8
+                </h1>
+                </div>
+                <div class="buttonbar">
+                    <button class="categorybutton" type="all" data-enabled="true">Усі </button>
+                    <button class="categorybutton" type="meat" data-enabled="true">М'ясні</button>
+                    <button class="categorybutton" type="pine" data-enabled="true">З ананасами</button>
+                    <button class="categorybutton" type="mushroom" data-enabled="true">З грибами</button>
+                    <button class="categorybutton" type="seaproducts" data-enabled="true">З морепродуктами</button>
+                    <button class="categorybutton" type="vega" data-enabled="true">Вега</button>
+                </div>
+                </div>
+            <div class="container">
+                <pizza-card
+                    img="assets\images\pizza_1.jpg"
+                    status="Нова"
+                    title="Імпреза"
+                    type="Meat"
+                    description="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaas"
+                    small-diameter=" Ø30"
+                    small-weight="⚖ 370"
+                    small-price="99"
+                    big-diameter="Ø40"
+                    big-weight="⚖ 660"
+                    big-price="169"
+                ></pizza-card>
+                <pizza-card
+                    img="assets\images\pizza_1.jpg"
+                    status=""
+                    title="Імпреза"
+                    type="Meat"
+                    description="Products"
+                    small-diameter=" Ø30"
+                    small-weight="⚖ 370"
+                    small-price="99"
+                    big-diameter="Ø40"
+                    big-weight="⚖ 660"
+                    big-price="169"
+                ></pizza-card>
+                <pizza-card
+                    img="assets\images\pizza_1.jpg"
+                    status="Нова"
+                    title="Імпреза"
+                    type="Meat"
+                    description="Products"
+                    small-diameter="Ø30"
+                    small-weight="⚖ 370"
+                    small-price="99"
+                    big-diameter="Ø40"
+                    big-weight="⚖ 660"
+                    big-price="169"
+                ></pizza-card>
+                <pizza-card
+                img="assets\images\pizza_1.jpg"
+                status=""
+                title="Імпреза"
+                type="Meat"
+                description="Products"
+                small-diameter="Ø30"
+                small-weight="⚖ 370"
+                small-price="99"
+                big-diameter="Ø40"
+                big-weight="⚖ 660"
+                big-price="169"
+            ></pizza-card>
+            <pizza-card
+            img="assets\images\pizza_1.jpg"
+            status=""
+            title="Імпреза"
+            type="Meat"
+            description="Products"
+            small-diameter="Ø30"
+            small-weight="⚖ 370"
+            small-price="99"
+            big-diameter="Ø40"
+            big-weight="⚖ 660"
+            big-price="169"
+        ></pizza-card>
+                <script src="pizza-card.js"></script>
+            </div>
+            <div class="PS">
+                <label for="PS">Pizza.22 - практичний проект в межах курсу JavaSript в Києво-Могилянській Академії</label>
+                <br>
+                <label for="PS2">Доставка піци не здійснюється</label>
+            </div>
+        </div>
+        <div class="badge" data-location="down">
+            <img src="assets\images\discount.svg">
+            <label>ЦЬОГО ТИЖНЯ НА ВСЕ </label>
+            <label class="discount">-20%</label>
+        </div>
+    </div>
+    <div class="sidePanel">
+        <div class="top">
+            <div class="labels">
+                <label class="orderLabel">Замовлення</label>
+                <label class="amount">3</label>
+            </div>
+            <button class="clearOrder">Очистити замовлення</button>
+        </div>
+        <div class="list">
+            <side-pizza-card 
+            name="Пепероні"
+            size="Великий"
+            diameter="Ø40"
+            weight="⚖500"
+            price="120"
+            image-url="assets\images\pizza_1.jpg"> 
+          </side-pizza-card> <side-pizza-card 
+          name="Пепероні"
+          size="Великий"
+          diameter="Ø40"
+          weight="⚖500"
+          price="120"
+          image-url="assets\images\pizza_1.jpg"> 
+        </side-pizza-card>
+        <side-pizza-card 
+            name="Пепероні"
+            size="Великий"
+            diameter="Ø40"
+            weight="⚖500"
+            price="120"
+            image-url="assets\images\pizza_1.jpg"> 
+          </side-pizza-card>
+          <side-pizza-card 
+            name="Пепероні"
+            size="Великий"
+            diameter="Ø40"
+            weight="⚖500"
+            price="120"
+            image-url="assets\images\pizza_1.jpg"> 
+          </side-pizza-card>
+          <side-pizza-card 
+            name="Пепероні"
+            size="Великий"
+            diameter="Ø40"
+            weight="⚖500"
+            price="120"
+            image-url="assets\images\pizza_1.jpg"> 
+          </side-pizza-card>
+          <side-pizza-card 
+            name="Пепероні"
+            size="Великий"
+            diameter="Ø40"
+            weight="⚖500"
+            price="120"
+            image-url="assets\images\pizza_1.jpg"> 
+          </side-pizza-card>
+          <side-pizza-card 
+            name="Пепероні"
+            size="Великий"
+            diameter="Ø40"
+            weight="⚖500"
+            price="120"
+            image-url="assets\images\pizza_1.jpg"> 
+          </side-pizza-card>
+          <side-pizza-card 
+            name="Пепероні"
+            size="Великий"
+            diameter="Ø40"
+            weight="⚖500"
+            price="120"
+            image-url="assets\images\pizza_1.jpg"> 
+          </side-pizza-card>
+          <side-pizza-card 
+            name="Пепероні"
+            size="Великий"
+            diameter="Ø40"
+            weight="⚖500"
+            price="120"
+            image-url="assets\images\pizza_1.jpg"> 
+          </side-pizza-card>
+          <side-pizza-card 
+            name="Пепероні"
+            size="Великий"
+            diameter="Ø40"
+            weight="⚖500"
+            price="120"
+            image-url="assets\images\pizza_1.jpg"> 
+          </side-pizza-card>
+        </div>
+        <div class="bottom">
+            <div class="labels">
+                <div class="sum">Сума замовлення</div>
+                <div class="money">
+                    <div class="moneyAmount">924</div>
+                    <div class="value">грн</div>
+                </div>
+            </div>
+            <button class="orderButton">Замовити</button>
+        </div>
+    </div>
+</body>
+</html>

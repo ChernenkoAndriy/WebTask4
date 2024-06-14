@@ -1,0 +1,133 @@
+/* pizza-card.css */
+
+/* Styling for elements inside the shadow DOM of the PizzaCard custom element */
+:host {
+  display: block;
+  /* Add any custom styles for the pizza card container here */
+}
+
+.pizza-card {
+  padding: 5%;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.pizza-card p {
+  height: 10%; /* Автоматично розраховує висоту в залежності від тексту */
+  font-size: 16px;
+  display: block;
+  word-wrap: break-word;
+  overflow:hidden; /* Включає автоматичний перенос тексту */
+}
+
+.pizza-card .imageContainer{
+  width: 20%;
+  height: 100%;
+}
+
+.pizza-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.pizza-card h1 {
+  height: 13%;
+  text-align: center; /* Вирівнюємо текст по центру горизонтально */
+  display: flex; /* Застосовуємо flex-контейнер для вертикального центрування */
+  align-items: center;
+  font-size: 40px;
+  color:#ea732e;
+  margin: 0%;
+}
+
+
+.pizza-card .price {
+  font-weight: bold;
+  font-weight: 400;
+  
+  margin-top: 10px;
+}
+label[for="price"]{
+  font-size: 30px;
+}
+.complex
+.numbers
+.price
+.value{
+  text-align: center;
+}
+
+.complex{
+  gap: 10px;
+}
+
+.numbers,
+.price{
+   height: 30%;
+}
+.buy-button{
+  height: 40%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.pizza-card .status {
+  position: absolute; /* Встановлюємо абсолютне позиціонування */
+  top: -10px; /* Зсуваємо нагору на 10 пікселів */
+  right: -10px; /* Зсуваємо вправо на 10 пікселів */
+  background-color: #ff0000; /* Колір фону */
+  color: #ffffff; /* Колір тексту */
+  padding: 5px 10px; /* Внутрішні відступи */
+  border-radius: 5px; /* Закруглюємо кути */
+}
+.pizza-card {
+  position: relative; /* Додаємо позиціонування relative для .pizza-card */
+}
+
+.pizza-card .status {
+  position: absolute; 
+  top: -10px;
+  right: -10px;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.pizza-details {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.pizza-details .complex {
+  margin-top: -7px;
+  flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column; /* Оновлена властивість */
+}
+
+.pizza-details  * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label[for="diameter"]{
+text-align: center;
+}
+
+label[for="value"]{
+  text-align: center;
+  }
+  .buy-button{
+    background: linear-gradient(to bottom, rgb(244, 134, 0), rgb(191, 95, 0));
+    border: 2px, solid #b46723;
+    border-radius: 3px;
+    color: white;
+    width: 60%;
+    height: 100%;
+  }

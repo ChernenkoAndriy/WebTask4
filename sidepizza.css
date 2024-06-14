@@ -1,0 +1,152 @@
+.sidepizza {
+    font-size: smaller;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Використовуємо flexbox для горизонтального розташування */
+  }
+  
+  .sidetxt {
+    padding: 2%;
+    width: 80%; /* Зменшуємо ширину текстового блоку */
+    height: 100%;
+    display: block;
+  }
+  
+  .image-container {
+    width: 20%; /* Збільшуємо ширину контейнера зображення */
+    height: 100%; /* Встановлюємо висоту контейнера зображення */
+    overflow: hidden; /* Обрізаємо зображення, яке виходить за межі */
+    display: flex; /* Додаємо flex для вертикального центрирування */
+    align-items: center; /* Центруємо зображення по вертикалі */
+    justify-content: center; /* Центруємо зображення по горизонталі */
+    position: relative; /* Для позиціонування зображення */
+  }
+  
+  .image-container img {
+    width: 200%; /* Робимо зображення вдвічі ширше контейнера */
+    height: 100%; /* Висота зображення повинна покривати контейнер */
+    object-fit: cover; /* Забезпечує покриття всього контейнера, зберігаючи пропорції */
+    transform: translateX(30%); /* Ссуваємо зображення на 20% вліво */
+    /* Альтернативний спосіб налаштування положення:
+    margin-left: -50%; /* Зсуваємо зображення вліво */
+  }
+  
+ 
+     /* Вирівнювання по центру по вертикалі */
+
+  
+  .sidename{
+    height: 33%;
+    width: 100%;
+    margin: 0px;
+    font-size: medium;
+    display: flex;
+    justify-content: center; /* Вирівнювання по центру по горизонталі */
+    align-items: center;
+    color: #EA862E;
+  }
+  
+  .sidenumbers{
+    height: 67%;
+    width: 100%;
+  }
+  
+  .sidecomplex label{
+    margin-left: 6% ;
+  }
+  
+  .sidebottom {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    margin-left: 6%;
+    margin-top: 3%;
+    align-items: center; /* Вирівнюємо елементи по вертикалі */
+}
+
+.sideprice {
+    width: 32%;
+    padding-top: 3%;
+    display: inline-block;
+    position: relative;
+    text-align: center; /* Вирівнюємо текст по горизонталі */
+    margin: auto; /* Центруємо елемент по горизонталі та вертикалі */
+}
+
+.sidebuttons {
+    width: 68%;
+    display: flex;
+    position: relative;
+    gap: 7%;
+    height: 34px;
+}
+.sidebuttons button{
+  font-size: 24px;
+  text-align: center;
+}
+
+.sidebottom .minusbutton {
+  background-color: red;
+  border: 0px;
+  border-bottom: 3px solid darkred;
+  border-radius: 100%;
+  flex: 1;
+  color: white;
+  font-weight: bolder;
+  background-image: linear-gradient(to bottom, red, rgb(192, 0, 0)); /* Градієнт вниз до трохи темнішого кольору */
+}
+
+.sidebottom .amount {
+  flex: 1;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.sidebuttons .plusbutton {
+  flex: 1;
+  background-color: rgb(81, 255, 0);
+  border: 0px; 
+  border-bottom: 3px solid rgb(41, 111, 0); 
+  color: white;
+  border-radius: 100%;
+  font-weight: bolder;
+  background-image: linear-gradient(to bottom, rgb(81, 255, 0), rgb(62, 170, 0));
+}
+
+.sidebuttons .cancelbutton {
+  flex: 1;
+  margin-left: 10%;
+  color: #EA862E;
+  font-size: 12px;
+  font-weight: bolder;
+  border-radius: 100%;
+  border: 0px; 
+  border-bottom: 3px solid rgb(152, 152, 152);
+  background-image: linear-gradient(to bottom, white, #e3e3e3);
+}
+
+.sidebuttons .cancelbutton:hover {
+  background-image: linear-gradient(to bottom, #e3e3e3, #e3e3e3);
+}
+
+.sidebuttons .plusbutton:hover {
+  background-image: linear-gradient(to bottom, rgb(41, 111, 0), rgb(41, 111, 0));
+  background-color: rgb(62, 170, 0);
+}
+
+.sidebottom .minusbutton:hover {
+  background-image: linear-gradient(to bottom, darkred, darkred);
+  background-color: darkred;
+}
+
+
+
+
+.sideprice {
+    height: 100%;
+}
+
+
+
+  

@@ -1,0 +1,449 @@
+/*==================================================================Total Panel Layout==================================================*/
+body {
+  margin: 0;
+  padding: 0;
+  font: 1em sans-serif;
+  display: flex;
+  overflow: hidden;
+  height: 100vh; /* Додаємо висоту для body */
+}
+
+.centralPanel {
+  flex: 1;
+  background-color: rgb(255, 249, 224);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  overflow-x: hidden; /* Додаємо вертикальну прокрутку */
+}
+
+.sidePanel {
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  display: block;
+  overflow-y: hidden; 
+  overflow-x: hidden;
+  /* Додаємо вертикальну прокрутку */
+}
+
+/*==================================================================Header Layout==================================================*/
+.header {
+  background-color: rgba(0, 0, 0, 0.69); /* Зменшуємо прозорість фону заголовка */
+  height: 10%;
+  color: white;
+  display: flex;
+  width: calc(100% - 300px);
+  position: fixed;
+  top: 0; 
+  gap: 20px;
+  z-index: 60;
+}
+
+label[for="timetable"]{
+font-size: 12px;
+padding-top: 4px;
+}
+
+.badge {
+  background-color: #EA862E;
+  width: 114px;
+  font-weight: 400;
+  text-align: center;
+  justify-content: center;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative; /* Додали */
+}
+
+.badge label {
+  height: 50%; /* Розмір відповідно до батьківського контейнера */
+  width: 100%; /* Розмір відповідно до батьківського контейнера */
+}
+
+.badge img {
+  width: 100%;
+  height: 20%;
+  transform: scaleY(-1);
+  position: absolute; /* Додали */
+  bottom: -19%; /* Відштовхуємо зображення вгору на 100% від висоти бейджу */
+  left: 0; /* Додали */
+}
+
+
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.firstRow {
+  display: flex;
+  gap: 30%;
+  width: inherit;
+  color: #a1a1a1;
+  background-color: rgba(255, 255, 255, 0);
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+  border-bottom: 1px solid white;
+}
+
+
+.firstRow .labels {
+  z-index: 60;
+  display: flex;
+  gap: 15px;
+}
+
+.first {
+  height: 50%; /* Встановлюємо висоту елемента */
+  display: flex; /* Додаємо flex-контейнер */
+  justify-content: center; /* Вирівнюємо текст по горизонталі */
+  align-items: center; /* Вирівнюємо текст по вертикалі */
+  font-weight: 600;
+}
+
+
+.second{
+  font-size: 22px;
+  font-weight: 600;
+}
+.orangeButton {
+  border-radius: 3px;
+  margin-left: auto;
+  border: 2px, rgb(144, 79, 0);
+  width: 55px;
+  height: 80%;
+  font: 14px;
+  color: white;
+  background: linear-gradient(to bottom, rgb(244, 134, 0), rgb(169, 93, 0));
+}
+
+.secondRow {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+.secondRow label {
+  text-align: center;
+}
+
+/*==================================================================SidePanel Layout==================================================*/
+
+.top {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  height: 10%;
+  display: flex; 
+  align-items: center; 
+}
+
+.top .labels {
+  width: 50%;
+  display: flex; 
+  font-weight: 600;
+  align-items: center; 
+}
+
+.labels .amount {
+  color: white;
+  background-color: #EA862E;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  display: flex; /* Використовуємо flex для центрування тексту */
+  justify-content: center; /* Центруємо текст по горизонталі */
+  align-items: center; /* Центруємо текст по вертикалі */
+}
+
+.clearOrder {
+  background-color: rgb(255, 255, 255);
+  border: 0px;
+  height: 50px; /* Встановлюємо однакову висоту з .amount */
+  width: 50%;
+  box-sizing: border-box;
+  color: #7b7b7b;
+  font-size: 11px;
+  display: flex; /* Використовуємо flex для центрування тексту */
+  justify-content: center; /* Центруємо текст по горизонталі */
+  align-items: center; /* Центруємо текст по вертикалі */
+}
+.clearOrder:hover{
+  color: #000000;
+}
+
+.bottom {
+  display: block;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  height: 15%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  justify-content: center;
+}
+
+.bottom .labels {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sum {
+  flex: 7; /* 7 частин */
+}
+
+.bottom .labels .money {
+  flex: 3; /* 3 частини */
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+
+.bottom .orderButton {
+  align-self: center;
+  flex: 1;
+  width: 100%;
+  align-self: center;
+  height: 30%;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px ;
+  background: linear-gradient(to bottom, rgb(244, 134, 0), rgb(169, 93, 0));
+  border: 3px, rgb(169, 93, 0);
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.list{
+  height: 75%;
+  padding: 0px;
+ overflow-y: auto;
+ overflow-x: hidden;
+ display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: 100px;
+  grid-gap: 0px; 
+  justify-content: center;
+}
+
+/*==================================================================CentralPanel Layout==================================================*/
+.cart {
+  height: 100%; /* Adjust height to fit the badge */
+  overflow-y: scroll;
+}
+.pizzaamount {
+  width: 30px; /* Встановлюємо ширину */
+  height: 30px; /* Встановлюємо висоту */
+  background-color: #f2802e; /* Колір фону */
+  color: rgb(255, 249, 224); /* Колір тексту */
+  border-radius: 50%; /* Робимо елемент круглим */
+  border: 4px solid rgb(255, 249, 224); /* Додаємо видиму рамку */
+  display: flex; /* Використовуємо flex-контейнер для центрування */
+  justify-content: center; /* Центруємо по горизонталі */
+  align-items: center; /* Центруємо по вертикалі */
+  font-size: 20px; /* Розмір тексту */
+}
+.buttonbar button{
+ background-color: rgb(255, 249, 224);
+ color: #EA862E;
+ border:0px;
+ padding-left: 15px;
+ padding-right: 15px;
+ border-radius: 3px;
+ font-size: medium;
+ font-weight: 300;
+ margin: 0%;
+ height: 100%;
+}
+.buttonbar button:hover{
+  background-color:#EA862E;
+  color:  rgb(255, 249, 224);
+}
+.buttonbar{
+  height: 40px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 30%));
+  grid-auto-rows: min(80vh);
+  grid-gap: 50px 40px; 
+  height: auto;
+  justify-content: center;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 40px;
+  
+}
+.PS{
+  padding-top: 50px;
+  height: 180px;
+  display: block;
+  text-align: center;
+  padding-top: 30px;
+  background-color: #f6f6f6;
+  color: #989898;
+  border-top: 2px solid rgb(202, 202, 202);
+
+}
+
+.menutop{
+  align-items: center;
+  display: block;
+  text-align: center;
+}
+
+.mainheader{
+  display: flex;
+  gap:10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Приховати вертикальний скроллбар */
+}
+
+.badge[data-location="down"] {
+  padding-top: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background-color: #EA862E;
+  position: fixed;
+  bottom: 0;
+  width: 100px;
+  height: 120px;
+  text-align: center;
+  justify-content: center;
+  z-index: 60;
+}
+.badge[data-location="down"] label {
+  height: 60%;
+  display: flex;  
+  justify-content: center; /* Вирівнюємо по горизонталі */
+  text-align: center;
+  font-weight: 5px;
+  font-size: 18px;
+  color: white;
+}
+
+.badge[data-location="down"] img {
+ top: -20%;
+ transform: scaleY(1);
+}
+.discount{
+  border-top: 2px dotted rgb(104, 46, 17);
+  padding-top: 10px;
+  height: 40%;
+  text-align: start;
+}
+
+/* Стиль для малого режиму (менше 600px) */
+@media (min-width: 400px) and (max-width: 899px){
+  body{
+  font-size: 14px;
+}
+label[for="delivery"]{
+  display: none;
+}
+label[for="timetable"]{
+  display: none;
+}
+.menutop{
+  display: none;
+}
+.container{
+  padding-left: 1%;
+  padding-right: 1%;
+  display: grid;
+grid-template-columns: repeat(1, minmax(0, 75%));
+grid-auto-rows: min(80vh);
+grid-gap: 50px 40px; 
+height: auto;
+justify-content: center;
+}
+}
+
+/* Стиль для нормального режиму (600px - 768px) */
+@media (min-width: 900px) and (max-width: 1099px){
+  body {
+      font-size: 16px;
+  }
+  label[for="delivery"]{
+    display: none;
+  }
+  .container{
+    padding-left: 3%;
+    padding-right: 3%;
+    display: grid;
+  grid-template-columns: repeat(2, minmax(0, 40%));
+  grid-auto-rows: min(80vh);
+  grid-gap: 50px 40px; 
+  height: auto;
+  justify-content: center;
+  }
+  .menutop{
+    display: none;
+  }
+}
+
+/* Стиль для середнього режиму (768px - 1024px) */
+@media (min-width: 1100px) {
+  body {
+      font-size: 18px;
+  }
+   label[for="delivery"]{
+    display: normal;
+  }
+  .menutop{
+    display: none;
+  }
+  .container{
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+  grid-template-columns: repeat(3, minmax(0, 40%));
+  grid-auto-rows: min(80vh);
+  grid-gap: 50px 40px; 
+  height: auto;
+  justify-content: center;
+  }
+}
+@media (min-width: 1500px) {
+  .menutop{
+    align-items: center;
+    display: block;
+    text-align: center;
+  }
+  label[for="delivery"]{
+    display: normal;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 30%));
+    grid-auto-rows: min(80vh);
+    grid-gap: 50px 40px; 
+    height: auto;
+    justify-content: center;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 40px;
+    
+  }
+}
